@@ -18,11 +18,10 @@ if (isset($_POST['ajax']) && $_POST['ajax'] === 'true') {
         $_SESSION['user_name'] = $name;  
         $_SESSION['user_email'] = $email; 
 
-        // Respond with a success message and the URL to redirect to
         echo json_encode([
             'status' => 'success',
             'message' => 'Профилът е успешно обновен.',
-            'redirect' => 'dashboard.php'  // Redirect URL after successful update
+            'redirect' => 'dashboard.php' 
         ]);
     } else {
         echo json_encode([

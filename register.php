@@ -35,9 +35,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             if (mysqli_stmt_execute($stmt)) {
                 session_start();
-                $_SESSION['user_id'] = mysqli_insert_id($conn); // Get the newly created user's ID
+                $_SESSION['user_id'] = mysqli_insert_id($conn);
                 $_SESSION['user_name'] = $name;
-                $redirect_url = 'dashboard.php'; // Set redirect URL
+                $redirect_url = 'dashboard.php';
             } else {
                 $error = 'Възникна грешка при регистрацията';
             }
